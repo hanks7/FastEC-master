@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':latte-annotations')
+    compile 'com.squareup:javapoet:1.9.0'
+    compile 'com.google.auto.service:auto-service:1.0-rc4'
+    compile 'com.google.auto:auto-common:0.9'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
