@@ -35,8 +35,8 @@ public class ExampleApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //String baseUrl = "http://952cloud.top/RestServer/api/";
-        //String baseUrl="http://oxjde2kpq.bkt.clouddn.com/";
+//        String baseUrl = "http://952cloud.top/RestServer/api/";
+//        String baseUrl="http://oxjde2kpq.bkt.clouddn.com/";
         String baseUrl="http://192.168.4.68:8080/RestServer/api/";
         Latte.init(this)
                 .withIcon(new FontAwesomeModule())

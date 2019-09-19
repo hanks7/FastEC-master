@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +93,7 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
     public void onResume() {
         super.onResume();
         mDelegate.onResume();
+
     }
 
     @Override
@@ -176,6 +178,7 @@ public abstract class BaseDelegate extends Fragment implements ISupportFragment 
     @Override
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         mDelegate.onLazyInitView(savedInstanceState);
+        Log.i("cc-ui-fragment", "(" + getClass().getSimpleName() + ".java:0)");
     }
 
     /**
