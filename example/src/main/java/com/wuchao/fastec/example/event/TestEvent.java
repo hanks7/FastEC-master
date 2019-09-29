@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.webkit.WebView;
 import android.widget.Toast;
 
-import com.wuchao.latte.delegates.web.event.Event;
+import com.wuchao.latte.Fragment.web.event.Event;
 
 /**
  * @author: wuchao

@@ -16,9 +16,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.wuchao.ec.R;
+import com.wuchao.latte.Fragment.LatteFragment;
 import com.wuchao.latte.app.ConfigType;
 import com.wuchao.latte.app.Latte;
-import com.wuchao.latte.delegates.LatteDelegate;
 import com.wuchao.latte.net.rx.RxRestClient;
 import com.wuchao.latte.ui.loader.LatteLoader;
 import com.wuchao.latte.util.log.LatteLogger;
@@ -43,12 +43,12 @@ public class FastPay implements View.OnClickListener {
     private AlertDialog mDialog = null;
     private int mOrderID = -1;
 
-    private FastPay(LatteDelegate delegate) {
+    private FastPay(LatteFragment delegate) {
         mActivity = delegate.getProxyActivity();
         mDialog = new AlertDialog.Builder(delegate.getContext()).create();
     }
 
-    public static FastPay create(LatteDelegate delegate) {
+    public static FastPay create(LatteFragment delegate) {
         return new FastPay(delegate);
     }
 

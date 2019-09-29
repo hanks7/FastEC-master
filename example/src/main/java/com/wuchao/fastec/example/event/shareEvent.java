@@ -1,7 +1,7 @@
 package com.wuchao.fastec.example.event;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.wuchao.latte.delegates.web.event.Event;
+import com.wuchao.latte.Fragment.web.event.Event;
 
 /**
  * @author: wuchao

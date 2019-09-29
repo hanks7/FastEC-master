@@ -8,7 +8,7 @@ import android.support.v7.widget.ContentFrameLayout;
 import android.view.MotionEvent;
 
 import com.wuchao.latte.R;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 
 import me.yokeyword.fragmentation.ExtraTransaction;
 import me.yokeyword.fragmentation.ISupportActivity;
@@ -28,7 +28,7 @@ public abstract class ProxyActivity extends AppCompatActivity implements ISuppor
     private final SupportActivityDelegate mDelegate = new SupportActivityDelegate(this);
 
     //用来返回根delegate
-    public abstract LatteDelegate setRootDelegate();
+    public abstract LatteFragment setRootDelegate();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

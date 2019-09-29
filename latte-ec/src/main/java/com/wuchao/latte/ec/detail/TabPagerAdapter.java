@@ -46,9 +46,9 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return ImageDelegate.create(PICTURES.get(0));
+            return ImageFragment.create(PICTURES.get(0));
         } else if (position == 1) {
-            return ImageDelegate.create(PICTURES.get(1));
+            return ImageFragment.create(PICTURES.get(1));
         }
         return null;
     }

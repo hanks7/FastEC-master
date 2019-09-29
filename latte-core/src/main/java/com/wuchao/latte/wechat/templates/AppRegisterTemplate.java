@@ -1,7 +1,7 @@
 package com.wuchao.latte.wechat.templates;
 
+import com.wuchao.latte.Fragment.LatteFragment;
 import com.wuchao.latte.activitys.ProxyActivity;
-import com.wuchao.latte.delegates.LatteDelegate;
 
 /**
  * @author: wuchao
@@ -11,7 +11,7 @@ import com.wuchao.latte.delegates.LatteDelegate;
 
 public class AppRegisterTemplate extends ProxyActivity{
     @Override
-    public LatteDelegate setRootDelegate() {
+    public LatteFragment setRootDelegate() {
         return null;
     }
 }

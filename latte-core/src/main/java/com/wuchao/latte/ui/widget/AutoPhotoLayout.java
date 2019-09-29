@@ -21,7 +21,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.joanzapata.iconify.widget.IconTextView;
 import com.wuchao.latte.R;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class AutoPhotoLayout extends LinearLayoutCompat {
     //选择的图片
     private AppCompatImageView mTargetImageView = null;
     private int mImageMargin = 0;
-    private LatteDelegate mDelegate = null;
+    private LatteFragment mDelegate = null;
     //存储一行的图片
     private List<View> mLineViews = null;
     private AlertDialog mTargetDialog = null;
@@ -85,7 +85,7 @@ public class AutoPhotoLayout extends LinearLayoutCompat {
         typedArray.recycle();
     }
 
-    public final void setDelegate(LatteDelegate delegate) {
+    public final void setDelegate(LatteFragment delegate) {
         this.mDelegate = delegate;
     }
 

@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.SimpleClickListener;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 import com.wuchao.latte.ec.main.personal.list.ListBean;
 
 /**
@@ -15,9 +15,9 @@ import com.wuchao.latte.ec.main.personal.list.ListBean;
 
 public class SettingsClickListener extends SimpleClickListener {
 
-    private final LatteDelegate mDelegate;
+    private final LatteFragment mDelegate;
 
-    public SettingsClickListener(LatteDelegate delegate) {
+    public SettingsClickListener(LatteFragment delegate) {
         mDelegate = delegate;
     }
 

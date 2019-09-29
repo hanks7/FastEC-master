@@ -15,8 +15,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.blankj.utilcode.util.FileUtils;
+import com.wuchao.latte.Fragment.PermissionCheckerFragment;
 import com.wuchao.latte.R;
-import com.wuchao.latte.delegates.PermissionCheckerDelegate;
 import com.wuchao.latte.util.file.FileUtil;
 
 import java.io.File;
@@ -29,10 +29,10 @@ import java.io.File;
 
 public class CameraHandler implements View.OnClickListener {
 
-    private final PermissionCheckerDelegate mDelegate;
+    private final PermissionCheckerFragment mDelegate;
     private final AlertDialog mDialog;
 
-    public CameraHandler(PermissionCheckerDelegate delegate) {
+    public CameraHandler(PermissionCheckerFragment delegate) {
         mDelegate = delegate;
         mDialog = new AlertDialog.Builder(delegate.getContext()).create();
     }

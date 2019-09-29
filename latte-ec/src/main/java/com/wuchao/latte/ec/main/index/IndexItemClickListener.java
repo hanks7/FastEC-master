@@ -4,8 +4,8 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.SimpleClickListener;
-import com.wuchao.latte.delegates.LatteDelegate;
-import com.wuchao.latte.ec.detail.GoodsDetailDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
+import com.wuchao.latte.ec.detail.GoodsDetailFragment;
 import com.wuchao.latte.ui.recycler.MultipleFields;
 import com.wuchao.latte.ui.recycler.MultipleItemEntity;
 
@@ -17,13 +17,13 @@ import com.wuchao.latte.ui.recycler.MultipleItemEntity;
 
 public class IndexItemClickListener extends SimpleClickListener {
 
-    private final LatteDelegate DELEGATE;
+    private final LatteFragment DELEGATE;
 
-    public IndexItemClickListener(LatteDelegate delegate) {
+    public IndexItemClickListener(LatteFragment delegate) {
         this.DELEGATE = delegate;
     }
 
-    public static IndexItemClickListener create(LatteDelegate delegate) {
+    public static IndexItemClickListener create(LatteFragment delegate) {
         return new IndexItemClickListener(delegate);
     }
 
@@ -31,7 +31,7 @@ public class IndexItemClickListener extends SimpleClickListener {
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         final MultipleItemEntity entity = (MultipleItemEntity) baseQuickAdapter.getData().get(position);
         final int goodId = entity.getField(MultipleFields.ID);
-        GoodsDetailDelegate delegate = GoodsDetailDelegate.create(goodId);
+        GoodsDetailFragment delegate = GoodsDetailFragment.create(goodId);
         DELEGATE.start(delegate);
     }
 

@@ -6,9 +6,9 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
 import com.wuchao.ec.R;
-import com.wuchao.latte.delegates.LatteDelegate;
-import com.wuchao.latte.ec.main.sort.SortDelegate;
-import com.wuchao.latte.ec.main.sort.content.ContentDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
+import com.wuchao.latte.ec.main.sort.SortFragment;
+import com.wuchao.latte.ec.main.sort.content.ContentFragment;
 import com.wuchao.latte.ui.recycler.ItemType;
 import com.wuchao.latte.ui.recycler.MultipleFields;
 import com.wuchao.latte.ui.recycler.MultipleItemEntity;
@@ -27,10 +27,10 @@ import me.yokeyword.fragmentation.SupportHelper;
 
 public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
 
-    private final SortDelegate DELEGATE;
+    private final SortFragment DELEGATE;
     private int mPrePosition = 0;
 
-    protected SortRecyclerAdapter(List<MultipleItemEntity> data, SortDelegate delegate) {
+    protected SortRecyclerAdapter(List<MultipleItemEntity> data, SortFragment delegate) {
         super(data);
         this.DELEGATE = delegate;
         //添加垂直菜单布局
@@ -84,14 +84,14 @@ public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
     }
 
     private void showContent(int contentId) {
-        ContentDelegate delegate = ContentDelegate.newInstance(contentId);
+        ContentFragment delegate = ContentFragment.newInstance(contentId);
         switchDelegate(delegate);
     }
 
-    private void switchDelegate(ContentDelegate delegate) {
-        LatteDelegate contentDelegate =
-                SupportHelper.findFragment(DELEGATE.getChildFragmentManager(), ContentDelegate.class);
-        //LatteDelegate contentDelegate = DELEGATE.findChildFragment(ContentDelegate.class);
+    private void switchDelegate(ContentFragment delegate) {
+        LatteFragment contentDelegate =
+                SupportHelper.findFragment(DELEGATE.getChildFragmentManager(), ContentFragment.class);
+        //LatteFragment contentDelegate = DELEGATE.findChildFragment(ContentFragment.class);
         if (contentDelegate != null) {
             contentDelegate.getSupportDelegate().replaceFragment(delegate, false);
         }

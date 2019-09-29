@@ -3,7 +3,7 @@ package com.wuchao.latte.ec.main.personal.list;
 import android.widget.CompoundButton;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 
 
 /**
@@ -19,10 +19,10 @@ public class ListBean implements MultiItemEntity {
     private String mText = null;
     private String mValue = null;
     private int mId = 0;
-    private LatteDelegate mDelegate = null;
+    private LatteFragment mDelegate = null;
     private CompoundButton.OnCheckedChangeListener mOnCheckedChangeListener = null;
 
-    public ListBean(int itemType, String imageUrl, String text, String value, int id, LatteDelegate delegate, CompoundButton.OnCheckedChangeListener onCheckedChangeListener) {
+    public ListBean(int itemType, String imageUrl, String text, String value, int id, LatteFragment delegate, CompoundButton.OnCheckedChangeListener onCheckedChangeListener) {
         mItemType = itemType;
         mImageUrl = imageUrl;
         mText = text;
@@ -74,11 +74,11 @@ public class ListBean implements MultiItemEntity {
         mId = id;
     }
 
-    public LatteDelegate getDelegate() {
+    public LatteFragment getDelegate() {
         return mDelegate;
     }
 
-    public void setDelegate(LatteDelegate delegate) {
+    public void setDelegate(LatteFragment delegate) {
         mDelegate = delegate;
     }
 
@@ -102,7 +102,7 @@ public class ListBean implements MultiItemEntity {
         private String text = null;
         private String value = null;
         private CompoundButton.OnCheckedChangeListener onCheckedChangeListener = null;
-        private LatteDelegate delegate = null;
+        private LatteFragment delegate = null;
 
         public Builder setId(int id) {
             this.id = id;
@@ -134,7 +134,7 @@ public class ListBean implements MultiItemEntity {
             return this;
         }
 
-        public Builder setDelegate(LatteDelegate delegate) {
+        public Builder setDelegate(LatteFragment delegate) {
             this.delegate = delegate;
             return this;
         }

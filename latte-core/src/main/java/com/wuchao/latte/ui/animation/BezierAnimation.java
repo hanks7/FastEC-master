@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.blankj.utilcode.util.ScreenUtils;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 
 /**
  * @author: wuchao
@@ -15,7 +15,7 @@ import com.wuchao.latte.delegates.LatteDelegate;
 
 public class BezierAnimation {
 
-    public static void addCart(LatteDelegate delegate, View start, View end,
+    public static void addCart(LatteFragment delegate, View start, View end,
                                ImageView target, BezierUtil.AnimationListener animationListener) {
         /* 起点 */
         final int[] startXY = new int[2];

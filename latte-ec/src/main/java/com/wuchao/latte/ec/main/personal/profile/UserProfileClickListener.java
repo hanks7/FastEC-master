@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.SimpleClickListener;
 import com.wuchao.ec.R;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 import com.wuchao.latte.ec.main.personal.list.ListBean;
 import com.wuchao.latte.ui.date.DateDialogUtil;
 import com.wuchao.latte.util.callback.CallbackManager;
@@ -28,10 +28,10 @@ import com.wuchao.latte.util.log.LatteLogger;
 
 public class UserProfileClickListener extends SimpleClickListener {
 
-    private final LatteDelegate mDelegate;
+    private final LatteFragment mDelegate;
     private String[] mGenders = new String[]{"男", "女", "保密"};
 
-    public UserProfileClickListener(LatteDelegate delegate) {
+    public UserProfileClickListener(LatteFragment delegate) {
         mDelegate = delegate;
     }
 
@@ -90,7 +90,7 @@ public class UserProfileClickListener extends SimpleClickListener {
                 mDelegate.startCameraWithCheck();
                 break;
             case 2:
-                final LatteDelegate nameDelegate = bean.getDelegate();
+                final LatteFragment nameDelegate = bean.getDelegate();
                 mDelegate.getSupportDelegate().start(nameDelegate);
                 break;
             case 3:

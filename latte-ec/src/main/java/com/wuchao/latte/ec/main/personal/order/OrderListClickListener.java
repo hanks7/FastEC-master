@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.SimpleClickListener;
-import com.wuchao.latte.delegates.LatteDelegate;
+import com.wuchao.latte.Fragment.LatteFragment;
 
 /**
  * @author: wuchao
@@ -14,15 +14,15 @@ import com.wuchao.latte.delegates.LatteDelegate;
 
 public class OrderListClickListener extends SimpleClickListener{
 
-    private final LatteDelegate mDelegate;
+    private final LatteFragment mDelegate;
 
-    public OrderListClickListener(LatteDelegate delegate) {
+    public OrderListClickListener(LatteFragment delegate) {
         mDelegate = delegate;
     }
 
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-        mDelegate.getSupportDelegate().start(new OrderCommentDelegate());
+        mDelegate.getSupportDelegate().start(new OrderCommentFragment());
     }
 
     @Override

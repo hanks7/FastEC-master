@@ -2,7 +2,7 @@ package com.wuchao.latte.ui.camera;
 
 import android.net.Uri;
 
-import com.wuchao.latte.delegates.PermissionCheckerDelegate;
+import com.wuchao.latte.Fragment.PermissionCheckerFragment;
 import com.wuchao.latte.util.file.FileUtil;
 
 /**
@@ -18,7 +18,7 @@ public class LatteCamera {
                 FileUtil.getFileNameByTime("IMG", "jpg")).getPath());
     }
 
-    public static void start(PermissionCheckerDelegate delegate) {
+    public static void start(PermissionCheckerFragment delegate) {
         new CameraHandler(delegate).beginCameraDialog();
     }
 }
